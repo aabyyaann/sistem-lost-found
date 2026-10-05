@@ -66,13 +66,13 @@ flowchart LR
 ### Decision register
 | ID | Belum disetujui | Dampak/owner keputusan |
 | --- | --- | --- |
-| D-01 | SSO/identity eligibility, email verification, password vs institutional identity | Account lifecycle/security; owner FTE/IT |
-| D-02 | Cookie session vs JWT (PRD login-cookie dan draft pipeline/STRIDE pernah menyebut JWT) | Auth, CSRF, revocation; security/IT |
-| D-03 | Framework, DB, hosting, TLS termination, network zones, object/audit stores | Deployment, backup, availability; IT |
-| D-04 | Visibility per field vs sembunyikan satu laporan penuh saat `is_private` | Privacy/public search; product/privacy owner |
-| D-05 | Evidence/photo limits, malware scan, encryption, retention/deletion | Data governance/security; owner belum ditetapkan |
-| D-06 | State machine, competing claims, transaction/handover proof | Operasional; FTE |
-| D-07 | RPO/RTO, monitoring, on-call, recovery, capacity | Operations/IT |
+|  D-01  | SSO/identity eligibility, email verification, password vs institutional identity | Account lifecycle/security; owner FTE/IT |
+|  D-02  | Cookie session vs JWT (PRD login-cookie dan draft pipeline/STRIDE pernah menyebut JWT) | Auth, CSRF, revocation; security/IT |
+|  D-03  | Framework, DB, hosting, TLS termination, network zones, object/audit stores | Deployment, backup, availability; IT |
+|  D-04  | Visibility per field vs sembunyikan satu laporan penuh saat `is_private` | Privacy/public search; product/privacy owner |
+|  D-05  | Evidence/photo limits, malware scan, encryption, retention/deletion | Data governance/security; owner belum ditetapkan |
+|  D-06  | State machine, competing claims, transaction/handover proof | Operasional; FTE |
+|  D-07  | RPO/RTO, monitoring, on-call, recovery, capacity | Operations/IT |
 
 ## Examples
 Aplikasi dapat meminta object storage privat secara logis, tetapi desain tidak menetapkan S3/MinIO atau URL publik. Sistem harus mengotorisasi setiap retrieval; signed URL/presigned approach juga belum dipilih.
