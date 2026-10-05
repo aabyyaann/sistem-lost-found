@@ -65,7 +65,7 @@ flowchart LR
 
 ### Decision register
 | ID | Belum disetujui | Dampak/owner keputusan |
-|---|---|---|
+| --- | --- | --- |
 | D-01 | SSO/identity eligibility, email verification, password vs institutional identity | Account lifecycle/security; owner FTE/IT |
 | D-02 | Cookie session vs JWT (PRD login-cookie dan draft pipeline/STRIDE pernah menyebut JWT) | Auth, CSRF, revocation; security/IT |
 | D-03 | Framework, DB, hosting, TLS termination, network zones, object/audit stores | Deployment, backup, availability; IT |
