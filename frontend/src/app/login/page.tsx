@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { ROLES, ROLE_LABEL } from "@/lib/rbac";
+import { DEMO_USERS } from "@/lib/mock-data";
 import type { Role } from "@/lib/types";
 
 const MAX_ATTEMPTS = 5;
@@ -39,7 +40,12 @@ export default function LoginPage() {
     // TODO: ganti dengan POST ke /auth/login atau /auth/register di backend.
     // Backend memvalidasi ulang input, menerapkan rate limit, dan mengirim cookie sesi HttpOnly.
     // Sesi demo di bawah hanya untuk melihat tampilan tiap peran.
-    const session = { role: mode === "register" ? "CIVITAS" : role, email, name: name || email.split("@")[0] };
+        const finalRole: Role = mode === "register" ? "CIVITAS" : role;
+    const session = {
+      role: finalRole,
+      email,
+      name: mode === "register" ? name.trim() : DEMO_USERS[finalRole].name,
+    };
     window.localStorage.setItem("lf_demo_session", JSON.stringify(session));
     router.push("/dashboard");
   };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
+import { RoleProvider } from "@/components/RoleProvider";
 import "./globals.css";
 
 const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans" });
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={sans.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <RoleProvider>{children}</RoleProvider>
+      </body>
     </html>
   );
 }

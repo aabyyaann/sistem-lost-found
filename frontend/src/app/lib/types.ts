@@ -1,1 +1,0 @@
-export type Role = "CIVITAS" | "PETUGAS" | "SUPER_ADMIN";
